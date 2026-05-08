@@ -16,8 +16,8 @@ candidate:
   location: "Munich, Germany"
   linkedin: "linkedin.com/in/prateek-gaur-15a629b4"
   cv_files:
-    - "data/cv/Lebenslauf.pdf"
-    - "data/cv/Projekterfahrung.pdf"
+    - "data/cv/Lebenslauf_Prateek_Gaur_ML_AI_Engineer.pdf"
+    - "data/cv/Lebenslauf_Prateek_Gaur_Konstrukteur.pdf"
   profile_summary: |
     Applied ML Engineer — M.Sc. Energy Engineering (TU Berlin), B.Tech. Mechanical Engineering.
     Skills: Python, PyTorch, LangChain, RAG, LLMs, LSTM/RNN, MLOps, Azure.
