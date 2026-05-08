@@ -1,0 +1,51 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.conda/
+
+# ── Secrets & personal config ─────────────────────────────────────────────────
+# config.yaml contains your ntfy topic, email, CV paths — never commit it
+configs/config.yaml
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── CV files — NEVER commit to a public repo ──────────────────────────────────
+# Contains DOB, phone, address, nationality — personal data
+data/cv/
+data/cv/*.pdf
+data/cv/*.docx
+
+# ── ChromaDB vector store — auto-generated, large, no need to track ───────────
+data/vectorstore/
+!data/vectorstore/.gitkeep
+
+# ── Generated outputs — PDFs and code files change every run ──────────────────
+outputs/cover_letters/*.pdf
+outputs/code_solutions/
+!outputs/cover_letters/.gitkeep
+!outputs/code_solutions/.gitkeep
+
+# ── IDE & OS ──────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
