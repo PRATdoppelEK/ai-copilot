@@ -1,0 +1,17 @@
+# ── Core LLM & RAG ────────────────────────────────────────────────────────────
+langchain-community>=0.4.0
+langchain-ollama>=0.2.0
+langchain-text-splitters>=1.0.0
+chromadb>=0.5.0
+pypdf>=4.0.0
+
+# ── Web Search ────────────────────────────────────────────────────────────────
+duckduckgo-search>=8.0.0
+
+# ── PDF Generation ────────────────────────────────────────────────────────────
+reportlab>=4.0.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+requests>=2.28.0
+pyyaml>=6.0.0
+python-dotenv>=1.0.0

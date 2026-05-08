@@ -23,7 +23,7 @@ your data stays on your machine.
 
 ## Three engines, one interface
 
-### Job Hunter
+### 🔍 Job Hunter
 Autonomously searches the live job market, scores opportunities against your CV
 using RAG, generates tailored cover letters as PDFs, and sends ranked alerts to your phone.
 
@@ -35,7 +35,7 @@ using RAG, generates tailored cover letters as PDFs, and sends ranked alerts to 
 | Cover letters | PDF generated per top match — tailored to company and role |
 | Notification | Push alert with ranked summary sent to phone via ntfy |
 
-### Code Assistant
+### 💻 Code Assistant
 Solves coding problems, debugs errors, explains code, reviews quality,
 generates boilerplate, and converts between languages — all saved to file.
 
@@ -46,9 +46,9 @@ generates boilerplate, and converts between languages — all saved to file.
 | `explain` | Plain-English explanation of what code does and how |
 | `review` | Structured code review: correctness, performance, readability, security |
 | `generate` | Production-ready boilerplate from a specification |
-| `convert` | Translates code between languages (e.g. MATLAB to Python) |
+| `convert` | Translates code between languages (e.g. MATLAB → Python) |
 
-### Knowledge Engine
+### 🧠 Knowledge Engine
 Answers any question using live web search + local LLM reasoning.
 Grounded answers with source citations — not hallucinated responses.
 
@@ -129,7 +129,7 @@ pip install -r requirements.txt
 
 **Step 4 — Add CV files:**
 ```bash
-# Place your CV PDFs at the paths set in config.yaml:
+# Place your CV PDFs at the paths set in config.yaml, e.g.:
 data/cv/Lebenslauf.pdf
 data/cv/Projekterfahrung.pdf
 ```
@@ -145,11 +145,11 @@ python copilot.py
 
 **Direct CLI flags:**
 ```bash
-python copilot.py --mode job
-python copilot.py --mode ask --input "What is RAG?"
-python copilot.py --mode solve --input "Write a Python LSTM for time-series regression" --lang python
+python copilot.py --mode job                        # Full job search run
+python copilot.py --mode ask --input "What is RAG?" # Quick question
+python copilot.py --mode solve --input "Write a Python function to parse ISO 8601 dates" --lang python
 python copilot.py --mode explain --input "attention mechanism in transformers"
-python copilot.py --mode dive --input "solid-state batteries 2026"
+python copilot.py --mode dive --input "solid-state batteries 2025"
 ```
 
 **Interactive session examples:**
@@ -158,15 +158,33 @@ Copilot › jobs
 Copilot › solve Write an LSTM training loop in PyTorch for time-series regression
 Copilot › ask What are the best vector databases for production RAG in 2026?
 Copilot › compare FAISS vs ChromaDB
-Copilot › explain-concept Kalman filter for SOC estimation
-Copilot › fact Solid-state batteries have higher energy density than lithium-ion
+Copilot › explain-concept Kalman filter
+Copilot › fact GPT-4 can process images natively
+Copilot › debug
+  [paste broken code, end with ---]
+  [paste error message]
 ```
 
 ---
 
-## Key technical concepts
+## Requirements
 
-**Local-first architecture:** Every LLM call goes to Ollama running on localhost.
+```
+langchain-community>=0.4.0
+langchain-ollama>=0.2.0
+chromadb>=0.5.0
+pypdf>=4.0.0
+duckduckgo-search>=8.0.0
+reportlab>=4.0.0
+requests>=2.28.0
+pyyaml>=6.0.0
+```
+
+---
+
+## Key concepts
+
+**Local-first architecture:** Every LLM call goes to Ollama running on `localhost`.
 CV data, job search queries, and code snippets never leave your machine.
 
 **RAG for CV matching:** Rather than including your full CV in every prompt,
@@ -186,16 +204,10 @@ and the copilot pushes job match summaries to your phone automatically.
 
 ---
 
-## Tech stack
-
-`LangChain` · `ChromaDB` · `Ollama` · `DuckDuckGo Search` · `ReportLab` · `Python 3.10+`
-
----
-
 ## Author
 
 **Prateek Gaur** — Applied ML Engineer | Agentic AI | TU Berlin M.Sc.
-[LinkedIn](https://www.linkedin.com/in/prateek-gaur-15a629b4) · prateekgaur@gmx.de · Munich, Germany
+[LinkedIn](https://www.linkedin.com/in/prateek-gaur-15a629b4) · [prateekgaur@gmx.de](mailto:prateekgaur@gmx.de)
 
 ---
 

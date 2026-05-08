@@ -1,0 +1,45 @@
+# ── AI Copilot Configuration ──────────────────────────────────────────────────
+# Copy this file to config.yaml and edit values before running.
+# All LLM inference runs locally via Ollama — no API keys required.
+
+llm:
+  model: "llama3"                  # Local model via Ollama
+  temperature: 0.2                 # Lower = more focused, higher = more creative
+  max_tokens: 2048
+
+embeddings:
+  model: "nomic-embed-text"        # Local embedding model via Ollama
+
+candidate:
+  name: "Prateek Gaur"
+  email: "prateekgaur@gmx.de"
+  location: "Munich, Germany"
+  linkedin: "linkedin.com/in/prateek-gaur-15a629b4"
+  cv_files:
+    - "data/cv/Lebenslauf.pdf"
+    - "data/cv/Projekterfahrung.pdf"
+  profile_summary: |
+    Applied ML Engineer — M.Sc. Energy Engineering (TU Berlin), B.Tech. Mechanical Engineering.
+    Skills: Python, PyTorch, LangChain, RAG, LLMs, LSTM/RNN, MLOps, Azure.
+    CAD: Siemens NX (certified), CATIA V5, SolidWorks.
+    Domain: battery systems, automotive AI, industrial ML pipelines.
+    Languages: English (C2), German (B2). Based in Munich. Open to hybrid/remote.
+
+job_search:
+  queries:
+    - "ML Engineer LLM RAG Munich Berlin 2026 English"
+    - "Battery AI Engineer Germany Python PyTorch"
+    - "Applied AI Engineer automotive Munich"
+    - "Data Scientist energy systems Germany"
+  max_results_per_query: 5
+  target_countries: ["Germany", "Austria", "Switzerland"]
+
+notifications:
+  ntfy_topic: "your-unique-topic"   # Set your ntfy.sh topic here
+  enabled: true
+
+paths:
+  outputs:     "outputs/"
+  cover_letters: "outputs/cover_letters/"
+  code_solutions: "outputs/code_solutions/"
+  vectorstore: "data/vectorstore/"
