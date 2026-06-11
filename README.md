@@ -166,6 +166,25 @@ Copilot › debug
 ```
 
 ---
+## Results & demo
+
+### Copilot interface — all three agents ready
+
+![Copilot banner](assets/screenshots/copilot_banner.png)
+
+### Knowledge engine — LSTM vs Transformer explained with sources
+
+![Knowledge engine](assets/screenshots/knowledge_engine.png)
+
+### Code assistant — battery SOH function generated
+
+![Code assistant](assets/screenshots/code_assistant.png)
+
+### Explain concept — RAG with live web sources cited
+
+![Explain concept](assets/screenshots/explain_concept.png)
+
+---
 
 ## Requirements
 
